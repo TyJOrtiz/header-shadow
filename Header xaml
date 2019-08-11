@@ -1,0 +1,16 @@
+In the .xaml:
+
+<grid>
+<grid.Resources>
+<ThemeShadow x:name="headershadow"/>
+</grid.resources>
+<--!yourcontent--/>
+<grid x:name="shadowcatcher" IsHitTestVisible="false"/>
+<grid height="68" shadow="{themeresource headershadow}" background="{themeresource SystemAcrylicWindowBrush}" verticalalignment="top">
+<!--translate the z axis up 16-->
+</grid>
+</grid>
+
+in the .xaml.cs after InitializeComponent():
+
+headershadow.recievers.add(shadowcatcher);
